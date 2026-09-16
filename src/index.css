@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "./styles/brutalism.css";
+
+@theme {
+  --color-cream: #FFF8E7;
+  --color-dark: #111111;
+  --color-neo-yellow: #FFD83D;
+  --color-neo-pink: #FF6B9D;
+  --color-neo-green: #B7F34A;
+  --color-neo-purple: #A855F7;
+  
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,149 @@
+/* NeoBrutalist Tactile System */
+:root {
+  --bg-color: #FFF8E7;
+  --text-color: #111111;
+  --border-color: #111111;
+  --shadow-color: #111111;
+  --surface-card: #FFFFFF;
+  --surface-card-muted: #F5EEDD;
+  
+  --accent-yellow: #FFD83D;
+  --accent-pink: #FF6B9D;
+  --accent-green: #B7F34A;
+  --accent-purple: #A855F7;
+}
+
+html.dark {
+  --bg-color: #111111;
+  --text-color: #FFF8E7;
+  --border-color: #FFF8E7;
+  --shadow-color: #FFF8E7;
+  --surface-card: #1A1A1A;
+  --surface-card-muted: #242424;
+}
+
+/* Global styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Tactile NeoBrutalist Card / Box */
+.neo-box {
+  background-color: var(--surface-card);
+  border: 3px solid var(--border-color);
+  box-shadow: 10px 10px 0px var(--shadow-color);
+  border-radius: 0px;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.neo-box-sm {
+  background-color: var(--surface-card);
+  border: 3px solid var(--border-color);
+  box-shadow: 5px 5px 0px var(--shadow-color);
+  border-radius: 0px;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.neo-box-interactive:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 13px 13px 0px var(--shadow-color);
+}
+
+/* Tactile NeoBrutalist Buttons */
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid var(--border-color);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+  border-radius: 0px;
+  cursor: pointer;
+  background-color: var(--surface-card);
+  color: var(--text-color);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  user-select: none;
+}
+
+.neo-btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px var(--shadow-color);
+}
+
+.neo-btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.neo-btn-primary {
+  background-color: var(--accent-yellow);
+  color: #111111;
+}
+
+.neo-btn-primary:hover {
+  background-color: #ffdf5a;
+}
+
+.neo-btn-secondary {
+  background-color: var(--surface-card);
+  color: var(--text-color);
+}
+
+/* Neo Tags */
+.neo-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid var(--border-color);
+  border-radius: 0px;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--surface-card-muted);
+  color: var(--text-color);
+  letter-spacing: 0.05em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-left: 2px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-yellow);
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}

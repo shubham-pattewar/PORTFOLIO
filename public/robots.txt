@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shubhampattewar.com/sitemap.xml
