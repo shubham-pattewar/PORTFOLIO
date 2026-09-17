@@ -1,6 +1,7 @@
 import React from 'react';
 import { NeoButton } from '../ui/NeoButton';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import shubhamPhoto from '../../assets/shubham.jpg';
 
 export const Hero: React.FC = () => {
   const handleScrollTo = (id: string) => {
@@ -81,39 +82,37 @@ export const Hero: React.FC = () => {
 
             {/* Frame Box */}
             <div className="neo-box p-3 bg-[var(--surface-card)]">
-              <div className="relative aspect-4/5 w-full bg-[#FFF8E7] dark:bg-[#1A1A1A] border-2 border-[var(--border-color)] flex flex-col justify-between p-4 overflow-hidden">
-                {/* Visual Graphic Representation */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                  <div className="w-64 h-64 border-4 border-dashed border-[var(--border-color)]"></div>
-                </div>
+              {/* Header Info */}
+              <div className="flex justify-between items-center pb-2 px-1 font-mono text-xs font-bold text-[var(--text-color)]">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 bg-[#FFD83D] border border-[var(--border-color)] inline-block"></span>
+                  SHUBHAM.P
+                </span>
+                <span className="text-[10px] opacity-70">2026 // SP</span>
+              </div>
 
-                {/* Top bar info */}
-                <div className="flex justify-between items-center z-10">
-                  <span className="font-mono text-xs font-bold text-[var(--text-color)]">SHUBHAM.P</span>
-                  <span className="font-mono text-xs text-[var(--text-color)] opacity-60">2026 // SP</span>
-                </div>
+              {/* Photo Image Frame */}
+              <div className="relative aspect-4/5 w-full bg-[#FFF8E7] dark:bg-[#1A1A1A] border-2 border-[var(--border-color)] overflow-hidden group/img">
+                <img
+                  src={shubhamPhoto}
+                  alt="Shubham Pattewar - Software Engineer"
+                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover/img:scale-105"
+                  loading="eager"
+                />
 
-                {/* Center Geometric NeoBrutalist Portrait Silhouette */}
-                <div className="my-auto flex flex-col items-center justify-center z-10">
-                  <div className="w-28 h-28 sm:w-36 sm:h-36 border-[3px] border-[var(--border-color)] bg-[#FFD83D] flex items-center justify-center shadow-[6px_6px_0px_var(--shadow-color)] relative mb-3">
-                    <span className="font-display text-4xl sm:text-5xl font-black text-[#111111]">
-                      SP
-                    </span>
-                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#B7F34A] border-2 border-[#111111]"></div>
-                  </div>
-                  <span className="font-mono text-xs font-bold tracking-widest uppercase text-[var(--text-color)] text-center mt-2">
-                    SHUBHAM PATTEWAR
-                  </span>
-                  <span className="font-mono text-[11px] opacity-70 text-center">
-                    B.Tech CSE · Builder · Researcher
-                  </span>
+                {/* Subtitle Badge Overlay */}
+                <div className="absolute bottom-2 left-2 z-10 px-2 py-0.5 bg-[var(--surface-card)]/90 backdrop-blur-xs border border-[var(--border-color)] font-mono text-[10px] font-bold text-[var(--text-color)] shadow-[2px_2px_0px_var(--shadow-color)]">
+                  SHUBHAM PATTEWAR
                 </div>
+                <div className="absolute top-2 right-2 z-10 px-1.5 py-0.5 bg-[#B7F34A] text-[#111111] border border-[#111111] font-mono text-[9px] font-bold tracking-wider">
+                  VERIFIED
+                </div>
+              </div>
 
-                {/* Bottom Frame Badge */}
-                <div className="border-t-2 border-[var(--border-color)] pt-2 flex justify-between items-center z-10 font-mono text-[10px] opacity-70">
-                  <span>DYPCET KOLHAPUR</span>
-                  <span>[ASSET: PORTRAIT]</span>
-                </div>
+              {/* Bottom Frame Badge */}
+              <div className="border-t-2 border-[var(--border-color)] mt-2 pt-2 flex justify-between items-center font-mono text-[10px] opacity-75">
+                <span>DYPCET KOLHAPUR</span>
+                <span>B.Tech CSE</span>
               </div>
             </div>
 
