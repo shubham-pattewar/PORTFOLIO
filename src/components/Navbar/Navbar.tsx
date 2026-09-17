@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from '../ui/Icons';
 
 interface NavbarProps {
   theme: 'light' | 'dark';
@@ -81,7 +82,49 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </ul>
 
-          <div className="pl-2 border-l-2 border-[var(--border-color)]/30">
+          {/* Social Quick Links */}
+          <div className="flex items-center gap-1.5 pl-4 border-l-2 border-[var(--border-color)]/30">
+            <a
+              href="https://github.com/shubham-pattewar"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+              className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#FFD83D] hover:text-[#111111] transition-colors"
+              title="GitHub"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shubham-pattewar-39a1942b8"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#0077B5] hover:text-white transition-colors"
+              title="LinkedIn"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://leetcode.com/u/Shubham_Pattewar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LeetCode Profile"
+              className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#FFA116] hover:text-[#111111] transition-colors"
+              title="LeetCode"
+            >
+              <LeetcodeIcon className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="mailto:sspattewar2004@gmail.com"
+              aria-label="Send Email"
+              className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#EA4335] hover:text-white transition-colors"
+              title="Email: sspattewar2004@gmail.com"
+            >
+              <Mail className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          <div className="pl-3 border-l-2 border-[var(--border-color)]/30">
             <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           </div>
         </nav>
@@ -120,6 +163,49 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Social Links */}
+            <div className="pt-6">
+              <span className="font-mono text-xs text-opacity-50 tracking-widest uppercase mb-3 block">
+                // PROFILES &amp; CONTACT
+              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href="https://github.com/shubham-pattewar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neo-btn px-3 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5"
+                >
+                  <GithubIcon className="w-3.5 h-3.5" />
+                  <span>GITHUB</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shubham-pattewar-39a1942b8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neo-btn px-3 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5"
+                >
+                  <LinkedinIcon className="w-3.5 h-3.5" />
+                  <span>LINKEDIN</span>
+                </a>
+                <a
+                  href="https://leetcode.com/u/Shubham_Pattewar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neo-btn px-3 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5"
+                >
+                  <LeetcodeIcon className="w-3.5 h-3.5" />
+                  <span>LEETCODE</span>
+                </a>
+                <a
+                  href="mailto:sspattewar2004@gmail.com"
+                  className="neo-btn px-3 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>EMAIL</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="border-t-[3px] border-[var(--border-color)] pt-6 pb-8 flex flex-col gap-4">

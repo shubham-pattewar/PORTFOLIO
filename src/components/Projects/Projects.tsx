@@ -74,7 +74,7 @@ export const Projects: React.FC = () => {
       {/* Intro Note */}
       <div className="mb-10 max-w-2xl">
         <p className="font-sans text-base sm:text-lg text-[var(--text-color)] opacity-85">
-          Projects built with high technical rigour across computer vision, autonomous multi-agent coordination, full-stack systems, and 3D digital heritage.
+          Projects built with high technical rigour across distributed systems & API gateways, computer vision, full-stack architectures, and 3D digital heritage.
         </p>
       </div>
 

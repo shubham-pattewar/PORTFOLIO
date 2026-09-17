@@ -18,6 +18,7 @@ export interface Project {
     id: string;
     label: string;
     caption: string;
+    image?: string;
     isDominant?: boolean;
   }[];
 }
@@ -29,6 +30,12 @@ export interface Technology {
   usedIn: string[];
 }
 
+export interface AchievementPhoto {
+  id?: string;
+  url: string;
+  caption?: string;
+}
+
 export interface Achievement {
   id: string;
   year: string;
@@ -37,6 +44,10 @@ export interface Achievement {
   context: string;
   badge: string;
   accent: string;
+  category?: string;
+  photos?: AchievementPhoto[];
+  image?: string;
+  imageCaption?: string;
 }
 
 export interface ExplorationEvent {

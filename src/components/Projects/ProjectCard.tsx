@@ -2,7 +2,8 @@ import React from 'react';
 import type { Project } from '../../types';
 import { ProjectCover } from './ProjectCover';
 import { NeoTag } from '../ui/NeoTag';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { GithubIcon } from '../ui/Icons';
 
 interface ProjectCardProps {
   project: Project;
@@ -39,13 +40,45 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Closed Card Information Area (approx 40% info) */}
         <div className="p-6 flex flex-col space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             <span
               className="font-mono text-xs font-bold px-2 py-0.5 border border-[var(--border-color)] text-[#111111]"
               style={{ backgroundColor: project.accent }}
             >
               {project.number} // {project.category}
             </span>
+
+            {/* Quick Action Links */}
+            <div
+              className="flex items-center gap-1.5"
+              onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => e.stopPropagation()}
+            >
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
+                  className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#FFD83D] hover:text-[#111111] transition-colors shadow-[2px_2px_0px_var(--border-color)]"
+                  title="View Repository"
+                >
+                  <GithubIcon className="w-3.5 h-3.5" />
+                </a>
+              )}
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} Live System`}
+                  className="p-1.5 border border-[var(--border-color)] bg-[var(--surface-card)] hover:bg-[#B7F34A] hover:text-[#111111] transition-colors shadow-[2px_2px_0px_var(--border-color)]"
+                  title="Live System"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
+            </div>
           </div>
 
           <h3 className="font-display text-xl sm:text-2xl font-extrabold uppercase tracking-tight text-[var(--text-color)]">

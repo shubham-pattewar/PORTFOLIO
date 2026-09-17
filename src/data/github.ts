@@ -10,6 +10,14 @@ export const GITHUB_CONFIG = {
 
 export const fallbackRepositories: GithubRepo[] = [
   {
+    name: 'RATEGATE',
+    description: 'Distributed Rate-Limiter as a Service (RLaaS) & reverse proxy with sub-millisecond Redis Lua sliding-window enforcement and real-time telemetry.',
+    language: 'JavaScript',
+    stars: 8,
+    url: 'https://github.com/shubham-pattewar/RATEGATE',
+    updatedAt: '2026-03',
+  },
+  {
     name: 'road-damage-detection',
     description: 'Autonomous road distress & pothole severity classification using PyTorch & OpenCV with FastAPI inference pipeline.',
     language: 'Python',
@@ -24,14 +32,6 @@ export const fallbackRepositories: GithubRepo[] = [
     stars: 4,
     url: 'https://github.com/shubhampattewar/food-safe',
     updatedAt: '2025-01',
-  },
-  {
-    name: 'orchestrix',
-    description: 'Autonomous multi-agent orchestration runtime with DAG workflow scheduling, error reflection, and sandboxed tool execution.',
-    language: 'Python',
-    stars: 3,
-    url: 'https://github.com/shubhampattewar/orchestrix',
-    updatedAt: '2024-12',
   },
   {
     name: 'monastery360',

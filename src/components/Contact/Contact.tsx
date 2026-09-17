@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SectionHeader } from '../ui/SectionHeader';
 import { NeoButton } from '../ui/NeoButton';
 import { Mail, Send, CheckCircle2, AlertCircle } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../ui/Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from '../ui/Icons';
 
 export const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -145,6 +145,26 @@ export const Contact: React.FC = () => {
                   className="font-mono text-xs sm:text-sm font-bold text-[var(--text-color)] hover:underline"
                 >
                   github.com/shubham-pattewar
+                </a>
+              </div>
+            </div>
+
+            {/* LeetCode */}
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 border-2 border-[var(--border-color)] bg-[#FFA116] flex items-center justify-center shrink-0">
+                <LeetcodeIcon className="w-4 h-4 text-[#111111]" />
+              </div>
+              <div>
+                <span className="font-mono text-[10px] opacity-60 block uppercase">
+                  PROBLEM SOLVING &amp; ALGORITHMS
+                </span>
+                <a
+                  href="https://leetcode.com/u/Shubham_Pattewar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs sm:text-sm font-bold text-[var(--text-color)] hover:underline"
+                >
+                  leetcode.com/u/Shubham_Pattewar
                 </a>
               </div>
             </div>

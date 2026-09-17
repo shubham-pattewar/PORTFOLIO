@@ -85,41 +85,62 @@ export const ProjectCover: React.FC<ProjectCoverProps> = ({ projectId, accent })
         </div>
       );
 
-    case 'orchestrix':
+    case 'rategate':
       return (
-        <div className="relative w-full h-48 sm:h-56 bg-[#181124] border-b-[3px] border-[var(--border-color)] overflow-hidden flex flex-col justify-between p-4 text-[#FFF8E7]">
-          {/* Agent Nodes & Flow Lines */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-30">
+        <div className="relative w-full h-48 sm:h-56 bg-[#0e0b1c] border-b-[3px] border-[var(--border-color)] overflow-hidden flex flex-col justify-between p-4 text-[#FFF8E7]">
+          {/* Cyber grid & wave pattern */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none">
             <svg className="w-full h-full" viewBox="0 0 300 150">
-              <circle cx="50" cy="75" r="8" fill="#A855F7" />
-              <circle cx="150" cy="35" r="10" fill="#A855F7" />
-              <circle cx="150" cy="115" r="10" fill="#A855F7" />
-              <circle cx="250" cy="75" r="12" fill="#A855F7" />
-              <line x1="58" y1="75" x2="140" y2="35" stroke="#A855F7" strokeWidth="2" strokeDasharray="4 2" />
-              <line x1="58" y1="75" x2="140" y2="115" stroke="#A855F7" strokeWidth="2" strokeDasharray="4 2" />
-              <line x1="160" y1="35" x2="238" y2="75" stroke="#A855F7" strokeWidth="2" />
-              <line x1="160" y1="115" x2="238" y2="75" stroke="#A855F7" strokeWidth="2" />
+              <path
+                d="M 10 110 Q 75 110 120 70 T 200 40 T 290 40"
+                fill="none"
+                stroke="#10B981"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 10 110 Q 75 110 120 95 T 200 80 T 290 100"
+                fill="none"
+                stroke="#EF4444"
+                strokeWidth="2"
+                strokeDasharray="4 2"
+              />
             </svg>
           </div>
 
-          <div className="flex justify-between items-center z-10 font-mono text-[10px] tracking-widest text-[#A855F7]">
-            <span>MULTI-AGENT DAG</span>
-            <span>TASK DECOMPOSITION</span>
+          {/* Top Telemetry */}
+          <div className="flex justify-between items-center z-10 font-mono text-[10px] tracking-widest text-[#8B5CF6]">
+            <span className="flex items-center gap-1.5 font-bold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+              RLaaS // REVERSE PROXY
+            </span>
+            <span>SLIDING WINDOW LOG</span>
           </div>
 
-          <div className="z-10 flex gap-3 items-center self-center">
-            <div className="border-2 border-[#A855F7] bg-[#111111] px-2.5 py-1.5 font-mono text-[10px] text-[#A855F7] shadow-[3px_3px_0px_#A855F7]">
-              PLANNER
+          {/* Center Pipeline Visual Element */}
+          <div className="z-10 flex flex-col gap-2 items-center self-center">
+            <div className="flex items-center gap-2">
+              <div className="border-2 border-[#8B5CF6] bg-[#111111] px-2.5 py-1 font-mono text-[10px] text-[#8B5CF6] shadow-[3px_3px_0px_#8B5CF6]">
+                REDIS LUA [ZSET]
+              </div>
+              <span className="font-mono text-xs text-[#8B5CF6]">⚡</span>
+              <div className="border-2 border-[#10B981] bg-[#111111] px-2.5 py-1 font-mono text-[10px] text-[#10B981] shadow-[3px_3px_0px_#10B981]">
+                UNDICI STREAM
+              </div>
             </div>
-            <span className="font-mono text-xs text-[#A855F7]">→</span>
-            <div className="border-2 border-[#A855F7] bg-[#111111] px-2.5 py-1.5 font-mono text-[10px] text-[#A855F7] shadow-[3px_3px_0px_#A855F7]">
-              EXEC // REFLECT
+            <div className="flex items-center gap-3 font-mono text-[9px] text-[#FFF8E7]/80">
+              <span className="bg-[#8B5CF6]/20 px-1.5 py-0.5 border border-[#8B5CF6]/40 text-[#8B5CF6]">
+                LATENCY: &lt;1ms
+              </span>
+              <span className="bg-[#10B981]/20 px-1.5 py-0.5 border border-[#10B981]/40 text-[#10B981]">
+                STATUS: 200 OK
+              </span>
             </div>
           </div>
 
+          {/* Bottom Telemetry */}
           <div className="flex justify-between items-center z-10 font-mono text-[10px] opacity-70">
-            <span>TOOL: FASTAPI SANDBOX</span>
-            <span>STATE: CONVERGED</span>
+            <span>CACHE: 30s IN-PROCESS TTL</span>
+            <span>BACKEND: REDIS 7 + MONGO</span>
           </div>
         </div>
       );

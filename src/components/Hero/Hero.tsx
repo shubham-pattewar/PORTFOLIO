@@ -1,6 +1,7 @@
 import React from 'react';
 import { NeoButton } from '../ui/NeoButton';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from '../ui/Icons';
 import shubhamPhoto from '../../assets/shubham.jpg';
 
 export const Hero: React.FC = () => {
@@ -69,6 +70,59 @@ export const Hero: React.FC = () => {
             >
               LET'S TALK
             </NeoButton>
+          </div>
+
+          {/* Direct Profiles & Contact Links */}
+          <div className="pt-3 w-full border-t border-[var(--border-color)]/20 mt-2">
+            <div className="flex items-center gap-2 mb-2.5">
+              <span className="w-2 h-2 bg-[#FF6B9D] inline-block border border-[var(--border-color)]" />
+              <span className="font-mono text-[11px] font-bold tracking-widest uppercase opacity-75">
+                PROFILES & DIRECT REACH
+              </span>
+            </div>
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+              <a
+                href="https://github.com/shubham-pattewar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-btn px-3 py-2 text-xs font-mono font-bold flex items-center gap-2 hover:bg-[#FFD83D] hover:text-[#111111] transition-all"
+                title="GitHub: https://github.com/shubham-pattewar"
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>GITHUB</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/shubham-pattewar-39a1942b8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-btn px-3 py-2 text-xs font-mono font-bold flex items-center gap-2 hover:bg-[#0077B5] hover:text-white transition-all"
+                title="LinkedIn: www.linkedin.com/in/shubham-pattewar-39a1942b8"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+                <span>LINKEDIN</span>
+              </a>
+
+              <a
+                href="https://leetcode.com/u/Shubham_Pattewar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neo-btn px-3 py-2 text-xs font-mono font-bold flex items-center gap-2 hover:bg-[#FFA116] hover:text-[#111111] transition-all"
+                title="LeetCode: https://leetcode.com/u/Shubham_Pattewar/"
+              >
+                <LeetcodeIcon className="w-4 h-4" />
+                <span>LEETCODE</span>
+              </a>
+
+              <a
+                href="mailto:sspattewar2004@gmail.com"
+                className="neo-btn px-3 py-2 text-xs font-mono font-bold flex items-center gap-2 hover:bg-[#EA4335] hover:text-white transition-all"
+                title="Email: sspattewar2004@gmail.com"
+              >
+                <Mail className="w-4 h-4" />
+                <span>GMAIL</span>
+              </a>
+            </div>
           </div>
         </div>
 
